@@ -7,14 +7,35 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="logo-container">
+      <img src="utilities/logo-whatsapp.svg" alt="WhatsApp Logo" class="logo-container" />
+    </div>
+    <div class="chat-container" id="chat-container">
+      <div class="header-container">
+        <img src="whatsapp-logo.png" alt="WhatsApp Logo" class="logo-small" />
+        <h1>Chatbot</h1>
+      </div>
+      <div id="chatbox">
+        <div id="chat-content"></div>
+      </div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Escribe un mensaje..."
+          autocomplete="off"
+        />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
     <!-- menu de navegacion -->
     <header class="header">
-      <div class="logo">LOGO</div>
+      <div class="logo">JAMYCREDITOS</div>
       <nav class="nav">
-        <a href="#">inicio</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Presta</a>
-        <a href="#">Info</a>
+        <a href="#"><span>I</span>nicio</a>
+        <a href="#"><span>N</span>osotros</a>
+        <a href="#"><span>P</span>restamos</a>
+        <a href="#"><span>I</span>nfo</a>
       </nav>
     </header>
 
@@ -39,5 +60,7 @@
 
       <img src="utilities/Finance.svg" alt="logo de marketing" />
     </section>
+    <script src="main.js"></script>
+
   </body>
 </html>

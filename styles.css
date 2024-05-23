@@ -8,6 +8,117 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.logo-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.logo-container {
+    width: 60px;
+    height: 60px;
+}
+
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 400px;
+    max-width: 100%;
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.chat-container.active {
+    display: flex;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #075e54;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.logo-small {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+#chatbox {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #e5ddd5;
+}
+
+#chat-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 10px;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    border-top-right-radius: 0;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: #fff;
+    border-top-left-radius: 0;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f0f0f0;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+button {
+    background-color: #075e54;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.logoWhat{
+    width: 70px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+}
+
 .header{
     width: 100%;
     height: 10vh;
@@ -23,8 +134,15 @@ body{
     gap: 30px;
 }
 
+.header .nav span{
+    color: red;
+}
+
 .header .logo{
-    font-size: 25px;
+    background-color: red;
+    color: white;
+    padding: 3px 10px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -48,9 +166,9 @@ body{
 
 .seccionOne .jamy{
     background-color: #0474e4;
-    padding: 3px 20px;
+    padding: 4px 18px;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -78,7 +196,8 @@ body{
 
 .seccionOne .btns div{
     width: 120px;
-    border: 1px black solid;
+    border: 1px rgb(71, 71, 71) solid;
+    border-radius: 3px;
 }
 
 .seccionOne .btns a{
@@ -94,13 +213,14 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 3%;
-    bottom: 9%;
+    left: 2%;
+    bottom: 7%;
     transition: all .2s ease-in-out;
 }
 
 .seccionOne .btns a:hover{
     left: 1%;
-    bottom: 7.5%
+    bottom: 5%;
+    transition: all .2s ease-in-out;
 }
 
