@@ -23,19 +23,33 @@ document.getElementById('chat-form').addEventListener('submit', function(e) {
 function addMessage(message, sender) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message', sender);
-    messageElement.textContent = message;
+
+    if (sender === 'bot' && message.includes('http')) {
+        messageElement.innerHTML = message;
+    } else {
+        messageElement.textContent = message;
+    }
+
     document.getElementById('chat-content').appendChild(messageElement);
     document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
 }
 
 function getBotResponse(input) {
-    // Simple logic for bot response
     const responses = {
         'hola': '¡Hola! ¿Cómo puedo ayudarte hoy?',
         'adios': '¡Adiós! Que tengas un buen día.',
         'como estas': 'Estoy bien, gracias por preguntar. ¿Y tú?',
+        'que puedes hacer': 'Puedo responder a tus preguntas básicas. Pregúntame algo.',
+        'quien eres': 'Soy un chatbot creado para ayudarte con tus preguntas.',
+        'que hora es': `La hora actual es: ${new Date().toLocaleTimeString()}`,
+        'cual es tu nombre': 'Soy JAMYCHATBOT.',
+        'gracias': '¡De nada! ¿Hay algo más en lo que pueda ayudarte?',
+        'ayuda': 'Estoy aquí para responder tus preguntas. Pregunta lo que necesites.',
+        'donde estas': 'Estoy aquí, en esta página web, listo para ayudarte.',
+        'que dia es hoy': `Hoy es: ${new Date().toLocaleDateString()}`,
+        'dime un chiste': '¿Por qué los pájaros no usan Facebook? Porque ya tienen Twitter.'
     };
 
-    const normalizedInput = input.toLowerCase();
-    return responses[normalizedInput] || 'Lo siento, no entiendo esa pregunta.';
+    const normalizedInput = input.toLowerCase().trim();
+    return responses[normalizedInput] || 'Para que tengamos una conversación más fluida, habla conmigo en <a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>!';
 }

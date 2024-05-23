@@ -8,16 +8,30 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* chatbot */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .logo-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     cursor: pointer;
 }
 
 .logo-container {
     width: 60px;
     height: 60px;
+    animation: float 2s ease-in-out infinite;
 }
 
 .chat-container {
@@ -42,15 +56,15 @@ body{
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #075e54;
+    background-color: #0474e4;
     color: white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .logo-small {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
 }
 
@@ -77,8 +91,9 @@ body{
 
 .message.user {
     align-self: flex-end;
-    background-color: #dcf8c6;
+    background-color: #0474e4;
     border-top-right-radius: 0;
+    color: white;
 }
 
 .message.bot {
@@ -103,7 +118,7 @@ body{
 }
 
 button {
-    background-color: #075e54;
+    background-color: #0474e4;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -120,6 +135,9 @@ button {
 }
 
 .header{
+    background-color: white;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: 10vh;
     color: black;
@@ -127,6 +145,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 0 12vh;
+    z-index: 1;
 }
 
 .header .nav{
@@ -135,7 +154,12 @@ button {
 }
 
 .header .nav span{
-    color: red;
+    color: #0474e4;
+}
+
+.header .nav a:hover{
+    color: #0474e4;
+    transition: all .2s ease-in-out;
 }
 
 .header .logo{
@@ -196,6 +220,7 @@ button {
 
 .seccionOne .btns div{
     width: 120px;
+    height: 41px;
     border: 1px rgb(71, 71, 71) solid;
     border-radius: 3px;
 }
@@ -220,7 +245,138 @@ button {
 
 .seccionOne .btns a:hover{
     left: 1%;
-    bottom: 5%;
+    bottom: 4%;
     transition: all .2s ease-in-out;
 }
 
+
+/* section two */
+
+.seccionTwo{
+    width: 100%;
+    height: 100vh;
+    padding: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.seccionTwo h2{
+    text-align: center;
+    max-width: 600px;
+    font-size: 28px;
+}
+
+.seccionTwo .main-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* cards section two */
+
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    border-radius: 24px;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content {
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 36px;
+    border-radius: 22px;
+    color: #ffffff;
+    overflow: hidden;
+    background: #0a3cff;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+
+  
+  .content::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%);
+    background: #ced8ff;
+    z-index: -1;
+    transform-origin: bottom;
+  
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content::after {
+    position: absolute;
+    content: "";
+    top: -8%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%);
+    background: #e7ecff;
+    z-index: -2;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .content .para {
+    z-index: 1;
+    opacity: 1;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content .link {
+    z-index: 1;
+    color: #fea000;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .content .link:hover {
+    text-decoration: underline;
+  }
+  
+  .card:hover {
+    transform: translate(0px, -16px);
+  }
+  
+  .card:hover .content::before {
+    rotate: -8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card:hover .content::after {
+    rotate: 8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
