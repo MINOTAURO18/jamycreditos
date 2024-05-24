@@ -147,7 +147,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0 12vh;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header .nav {
@@ -306,7 +306,8 @@ button {
   font-weight: 700;
   color: #ffffff;
   overflow: hidden;
-  background: linear-gradient(135deg, #0474e4, #003f9e);
+  /* background: linear-gradient(135deg, #0474e4, #003f9e); */
+  background: #0474e4;
   transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -387,7 +388,8 @@ button {
 /* section 3 */
 
 .seccionThree {
-  background: linear-gradient(135deg, #3198ff, #001f4e);
+  /* background: linear-gradient(135deg, #3198ff, #001f4e); */
+  background: #0474e4;
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -439,4 +441,31 @@ button {
 .seccionFour{
     width: 100%;
     min-height: 80vh;
+    padding: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.seccionFour h2{
+    background-color: #0474e4;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 4px;
+}
+
+.seccionFour h3{
+    background-color: red;
+    padding: 3px 15px;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.seccionFour .cards{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
 }
