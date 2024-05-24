@@ -9,6 +9,56 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* decoracion */
+
+.deco1{
+    position: absolute;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 12rem;
+    height: 10rem;
+    transform: rotate(90deg) skew(-12deg);
+    border-radius: 1.5rem;
+    background: linear-gradient(45deg, #0088f8, rgb(0, 119, 255));
+    filter: blur(6rem);
+    opacity: .8;
+    display: none;
+    z-index: -1;
+}
+
+@media (width > 200px){
+   .deco1{
+    right: 100px;
+    opacity: .8;
+    display: block;
+    }
+}
+
+.deco2{
+    position: absolute;
+    position: fixed;
+    top: 40%;
+    left: 45%;
+    width: 12rem;
+    height: 10rem;
+    transform: rotate(90deg) skew(-12deg);
+    border-radius: 1.5rem;
+    background: linear-gradient(45deg, #4affe7, rgb(0, 26, 255));
+    filter: blur(6rem);
+    opacity: .8;
+    display: none;
+    z-index: -1;
+}
+
+@media (width > 200px){
+   .deco2{
+    right: 100px;
+    opacity: .8;
+    display: block;
+    }
+}
+
 /* chatbot */
 @keyframes float {
   0% {
@@ -257,7 +307,7 @@ button {
 
 .seccionTwo {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 15vh;
   display: flex;
   justify-content: center;
@@ -447,6 +497,12 @@ button {
     align-items: center;
     flex-direction: column;
     gap: 30px;
+}
+
+.seccionFour p{
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
 }
 
 .seccionFour h2{
