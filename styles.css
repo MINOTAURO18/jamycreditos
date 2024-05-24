@@ -21,8 +21,8 @@ body {
     transform: rotate(90deg) skew(-12deg);
     border-radius: 1.5rem;
     background: linear-gradient(45deg, #0088f8, rgb(0, 119, 255));
-    filter: blur(6rem);
-    opacity: .8;
+    filter: blur(8rem);
+    opacity: .9;
     display: none;
     z-index: -1;
 }
@@ -38,14 +38,14 @@ body {
 .deco2{
     position: absolute;
     position: fixed;
-    top: 40%;
+    top: 25%;
     left: 45%;
-    width: 12rem;
-    height: 10rem;
+    width: 8rem;
+    height: 6rem;
     transform: rotate(90deg) skew(-12deg);
     border-radius: 1.5rem;
     background: linear-gradient(45deg, #4affe7, rgb(0, 26, 255));
-    filter: blur(6rem);
+    filter: blur(6.5rem);
     opacity: .8;
     display: none;
     z-index: -1;
@@ -206,16 +206,16 @@ button {
 }
 
 .header .nav span {
-  color: #0474e4;
+  color: #00960c;
 }
 
 .header .nav a:hover {
-  color: #0474e4;
+  color: #00960c;
   transition: all 0.2s ease-in-out;
 }
 
 .header .logo {
-  background-color: red;
+  background-color: #00960c;
   color: white;
   padding: 3px 10px;
   font-size: 20px;
@@ -280,7 +280,7 @@ button {
 }
 
 .seccionOne .btns a {
-  background-color: #0474e4;
+  background-color: #00960c;
   width: 120px;
   height: 40px;
   border: 1px rgb(255, 255, 255) solid;
@@ -439,13 +439,14 @@ button {
 
 .seccionThree {
   /* background: linear-gradient(135deg, #3198ff, #001f4e); */
-  background: #0474e4;
+  background: #00960c;
   width: 100%;
   min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   gap: 20px;
 }
 
@@ -455,7 +456,7 @@ button {
 }
 
 .seccionThree h4 {
-  background-color: red;
+  background-color: #0474e4;
   color: white;
   padding: 3px 20px;
   border-radius: 4px;
@@ -469,16 +470,16 @@ button {
 }
 
 .seccionThree .entidades span {
-    color: black;
-    background-color: white;
+    color: rgb(255, 255, 255);
+    background-color: #0474e4;
     padding: 3px 15px;
     border-radius: 4px;
     font-weight: 600;
 }
 
 .seccionThree .adver{
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     max-width: 900px;
     text-align: center;
     padding: 3px 15px;
@@ -506,14 +507,14 @@ button {
 }
 
 .seccionFour h2{
-    background-color: #0474e4;
+    background-color: #00960c;
     color: white;
     padding: 3px 15px;
     border-radius: 4px;
 }
 
 .seccionFour h3{
-    background-color: red;
+    background-color: #0474e4;
     padding: 3px 15px;
     color: white;
     border-radius: 3px;
