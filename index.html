@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- decoracion -->
-
-    <span class="deco1"></span>
-    <span class="deco2"></span>
-    <span class="deco3"></span>
-
     <!-- chatbot -->
     <div class="logo-container">
       <img
@@ -81,9 +75,9 @@
 
     <section class="seccionTwo">
       <h2>
-        <span style="color: #00960c">¿</span>Qué requisitos necesitas para
+        <span style="color: #0474e4">¿</span>Qué requisitos necesitas para
         solicitar tu microPrestamo con
-        <span style="color: #00960c">JAMYCREDITOS ?</span>
+        <span style="color: #0474e4">JAMYCREDITOS ?</span>
       </h2>
 
       <!-- cards -->
@@ -139,9 +133,21 @@
       </h4>
 
       <div class="entidades">
-        <img style="width: 150px" src="utilities/bancolombia_s.a._logo.svg" alt="" />
-        <img style="width: 150px" src="utilities/nequi.svg" alt="" />
-        <img style="width: 150px" src="utilities/daviplata.svg" alt="" />
+        <img
+          style="width: 150px; height: 100px"
+          src="utilities/bancolombia_s.a._logo.svg"
+          alt=""
+        />
+        <img
+          style="width: 150px; height: 100px"
+          src="utilities/nequi.svg"
+          alt=""
+        />
+        <img
+          style="width: 150px; height: 100px"
+          src="utilities/daviplata.svg"
+          alt=""
+        />
         <span>O cualquier otra entidad</span>
       </div>
 
@@ -183,6 +189,41 @@
             <p class="para">Correo electronico activo</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- section 5 -->
+
+    <section class="seccionFive">
+      <h2>Simula tu credito de una manera facil y rapida</h2>
+      <h4>Recuerda que nuestro monto minimo es de 50 mil y el maximo son 150 mil pesos y si es tu primera vez solo te podemos prestarte 50 mil</h4>
+      <div class="simulador">
+        <div class="container">
+          <h1>Simulador de Préstamos</h1>
+          <div class="form-group">
+            <input
+              type="number"
+              id="monto"
+              min="50000"
+              max="150000"
+              step="50000"
+            />
+          </div>
+          <div class="form-group">
+            <label>Plazo:</label>
+            <div>
+              <input type="radio" id="plazo15" name="plazo" value="15" />
+              <label for="plazo15">15 días</label>
+            </div>
+            <div>
+              <input type="radio" id="plazo30" name="plazo" value="30" />
+              <label for="plazo30">30 días</label>
+            </div>
+          </div>
+          <button onclick="calcularPrestamo()">Calcular</button>
+          <div id="resultado" class="resultado"></div>
+        </div>
+        <img src="utilities/Data-report.svg" alt="" />
       </div>
     </section>
     <script src="main.js"></script>

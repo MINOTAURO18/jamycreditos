@@ -11,77 +11,7 @@ body {
 
 /* decoracion */
 
-.deco1{
-    position: absolute;
-    position: fixed;
-    top: 40%;
-    left: 0;
-    width: 12rem;
-    height: 10rem;
-    transform: rotate(90deg) skew(-12deg);
-    border-radius: 1.5rem;
-    background: linear-gradient(45deg, #0088f8, rgb(0, 119, 255));
-    filter: blur(8rem);
-    opacity: .9;
-    display: none;
-    z-index: -1;
-}
 
-@media (width > 200px){
-   .deco1{
-    right: 100px;
-    opacity: .8;
-    display: block;
-    }
-}
-
-.deco2{
-    position: absolute;
-    position: fixed;
-    top: 25%;
-    left: 45%;
-    width: 8rem;
-    height: 6rem;
-    transform: rotate(90deg) skew(-12deg);
-    border-radius: 1.5rem;
-    background: linear-gradient(45deg, #4affe7, rgb(0, 26, 255));
-    filter: blur(6.5rem);
-    opacity: .8;
-    display: none;
-    z-index: -1;
-}
-
-@media (width > 200px){
-   .deco2{
-    right: 100px;
-    opacity: .8;
-    display: block;
-    }
-}
-
-.deco3{
-  position: absolute;
-  position: fixed;
-  top: 18%;
-  left: 85%;
-  width: 8rem;
-  height: 6rem;
-  transform: rotate(90deg) skew(-12deg);
-  border-radius: 1.5rem;
-  background: linear-gradient(45deg, #4affe7, rgb(0, 26, 255));
-  filter: blur(6.5rem);
-  opacity: .8;
-  display: none;
-  z-index: -1;
-}
-
-@media (width > 200px){
- .deco3{
-  right: 100px;
-  opacity: .8;
-  display: block;
-  }
-}
 
 /* chatbot */
 @keyframes float {
@@ -114,7 +44,7 @@ body {
   position: fixed;
   bottom: 80px;
   right: 20px;
-  width: 400px;
+  width: 320px;
   max-width: 100%;
   display: none;
   flex-direction: column;
@@ -259,6 +189,7 @@ button {
 
 .seccionOne {
   display: flex;
+  min-height: 90vh;
   padding: 12vh;
   justify-content: space-between;
   align-items: center;
@@ -331,6 +262,7 @@ button {
 /* section two */
 
 .seccionTwo {
+  background-color: #e4f2ff;
   width: 100%;
   min-height: 100vh;
   padding: 15vh;
@@ -464,7 +396,7 @@ button {
 
 .seccionThree {
   /* background: linear-gradient(135deg, #3198ff, #001f4e); */
-  background: #00960c;
+  /* background: #00960c; */
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -477,7 +409,7 @@ button {
 
 .seccionThree h2 {
   font-size: 35px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .seccionThree h4 {
@@ -516,6 +448,7 @@ button {
 /* section 4 */
 
 .seccionFour{
+  background-color: #e4f2ff;
     width: 100%;
     min-height: 80vh;
     padding: 12vh;
@@ -551,6 +484,111 @@ button {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* section 5 */
+
+.seccionFive{
+  width: 100%;
+  min-height: 90vh;
+  padding: 15vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.seccionFive h2{
+  background: #00960c;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 3px 15px;
+  color: white;
+}
+
+.seccionFive h4{
+  background: #0474e4;
+  border-radius: 4px;
+  color: white;
+  padding: 3px 15px;
+  margin: 0 auto;
+}
+
+.simulador{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.simulador img{
+  max-width: 400px;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+  display: flex;
+  gap: 10px;
+  
+}
+
+.form-group div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 
@@ -564,7 +602,7 @@ button {
     }
 
     .seccionOne{
-      min-height: 80vh;
+      min-height: 85vh;
        padding: 2vh 5vh 10vh 5vh;
        
     }
@@ -578,12 +616,34 @@ button {
     .seccionOne img{
       display: none;
     }
-    .seccionTwo{
+    .seccionTwo, .seccionFour{
       padding: 5vh;
     }
 
     .seccionTwo .main-cards{
+      gap: 50px;
     }
+
+    .seccionTwo h2{
+      font-size: 22px;
+    }
+
+    .seccionThree{
+      padding: 5vh;
+      gap: 15px;
+    }
+
+    .seccionThree .entidades{
+      gap: 10px;
+    }
+
+    .seccionFour h3{
+      text-align: center;
+    }
+
+
+
+    
 
     
 }
