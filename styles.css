@@ -59,6 +59,30 @@ body {
     }
 }
 
+.deco3{
+  position: absolute;
+  position: fixed;
+  top: 18%;
+  left: 85%;
+  width: 8rem;
+  height: 6rem;
+  transform: rotate(90deg) skew(-12deg);
+  border-radius: 1.5rem;
+  background: linear-gradient(45deg, #4affe7, rgb(0, 26, 255));
+  filter: blur(6.5rem);
+  opacity: .8;
+  display: none;
+  z-index: -1;
+}
+
+@media (width > 200px){
+ .deco3{
+  right: 100px;
+  opacity: .8;
+  display: block;
+  }
+}
+
 /* chatbot */
 @keyframes float {
   0% {
@@ -77,6 +101,7 @@ body {
   bottom: 15px;
   right: 15px;
   cursor: pointer;
+  z-index: 10;
 }
 
 .logo-container {
@@ -97,7 +122,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
-  z-index: 2;
+  z-index: 20;
 }
 
 .chat-container.active {
@@ -466,6 +491,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -525,4 +551,39 @@ button {
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
+}
+
+
+@media (width < 800px){
+    .header{
+       padding: 0 5vh;
+       margin: 0 auto;
+    }
+    .header .nav{
+      display: none;
+    }
+
+    .seccionOne{
+      min-height: 80vh;
+       padding: 2vh 5vh 10vh 5vh;
+       
+    }
+
+
+    .seccionOne h2{
+      font-size: 45px;
+      margin-top: 20px;
+    }
+
+    .seccionOne img{
+      display: none;
+    }
+    .seccionTwo{
+      padding: 5vh;
+    }
+
+    .seccionTwo .main-cards{
+    }
+
+    
 }
