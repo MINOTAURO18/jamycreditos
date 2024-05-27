@@ -532,8 +532,8 @@ button {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -572,18 +572,20 @@ input[type="radio"] {
   margin-right: 5px;
 }
 
-button {
+.seccionFive button, .seccionFive a {
+  width: 150px;
   background-color: #28a745;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  font-weight: 600;
 }
 
-button:hover {
-  background-color: #218838;
-}
+
 
 .resultado {
   margin-top: 20px;
@@ -639,6 +641,10 @@ button:hover {
 
     .seccionFour h3{
       text-align: center;
+    }
+
+    .seccionFive{
+      padding: 5vh;
     }
 
 
