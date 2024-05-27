@@ -594,6 +594,36 @@ input[type="radio"] {
 }
 
 
+/* footer */
+.footer{
+  background:#e4f2ff ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 5vh 15vh;
+}
+
+.footer h3{
+  background: #00960c;
+  padding: 3px 15px;
+  color: white;
+  border-radius: 4px;
+}
+
+.footer .redes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.footer .redes a:hover{
+  transform: translateY(-3px);
+  transition: all .2s ease-in-out;
+}
+
+
+/* responsive */
 @media (width < 800px){
     .header{
        padding: 0 5vh;
