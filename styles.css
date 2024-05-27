@@ -492,7 +492,7 @@ button {
 .seccionFive{
   width: 100%;
   min-height: 90vh;
-  padding: 15vh;
+  padding: 20vh;
   display: flex;
   flex-direction: column;
   gap: 30px;
