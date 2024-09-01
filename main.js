@@ -64,15 +64,15 @@ function calcularPrestamo() {
     
     let resultado = document.getElementById('resultado');
     
-    if (isNaN(monto) || monto < 50000 || monto > 150000) {
-        resultado.textContent = 'Por favor, ingrese un monto válido entre 50,000 y 150,000 pesos.';
+    if (isNaN(monto) || monto < 100000 || monto > 400000) {
+        resultado.textContent = 'Por favor, ingrese un monto válido entre 100,000 y 400,000 pesos.';
         return;
     }
     
     let interes = 0;
     
     if (plazo15) {
-        interes = monto * .2;
+        interes = monto * .12;
 
     } else if (plazo30 && monto > 99999) {
         interes = monto * 0.25;

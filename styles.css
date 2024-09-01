@@ -8,10 +8,15 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  background-color: white;
+  
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     
+    
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en Chrome, Safari, y Edge */
 }
 
 /* decoracion */
@@ -147,9 +152,13 @@ button {
 }
 
 .header {
-  background-color: white;
-  position: sticky;
-  top: 0;
+   /* Negro con 50% de transparencia */
+   position: absolute;
+  padding: 20px;
+  color: white;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
   width: 100%;
   height: 10vh;
   color: black;
@@ -185,7 +194,7 @@ button {
 
 .header .nav a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: 600;
   font-size: 18px;
 }
@@ -193,8 +202,9 @@ button {
 /* seccion 1 */
 
 .seccionOne {
+  background: linear-gradient(to top, #8800f8, #2f00ff);
   display: flex;
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 12vh;
   justify-content: space-between;
   align-items: center;
@@ -212,13 +222,14 @@ button {
 }
 
 .seccionOne h2 {
+  color: white;
   max-width: 600px;
   font-size: 60px;
   font-weight: 600;
 }
 
 .seccionOne h2 .pedaso {
-  color: #0474e4;
+  color: rgb(255, 255, 255);
 }
 
 .seccionOne img {
@@ -267,7 +278,7 @@ button {
 /* section two */
 
 .seccionTwo {
-  background-color: #e4f2ff;
+  background: linear-gradient(to left, #b3ff00, #00960c);
   width: 100%;
   min-height: 100vh;
   padding: 15vh;
@@ -279,6 +290,7 @@ button {
 }
 
 .seccionTwo h2 {
+  color: white;
   text-align: center;
   max-width: 600px;
   font-size: 28px;
@@ -402,6 +414,7 @@ button {
 .seccionThree {
   /* background: linear-gradient(135deg, #3198ff, #001f4e); */
   /* background: #00960c; */
+  background: linear-gradient(to top, #8800f8, #2f00ff);
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -414,7 +427,7 @@ button {
 
 .seccionThree h2 {
   font-size: 35px;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 
 .seccionThree h4 {
@@ -441,7 +454,7 @@ button {
 }
 
 .seccionThree .adver{
-    background-color: rgb(255, 0, 0);
+    background-color: #00960c;
     color: rgb(255, 255, 255);
     max-width: 900px;
     text-align: center;
@@ -453,7 +466,7 @@ button {
 /* section 4 */
 
 .seccionFour{
-  background-color: #e4f2ff;
+  background: linear-gradient(to left, #b3ff00, #00960c);
     width: 100%;
     min-height: 80vh;
     padding: 12vh;
@@ -495,6 +508,7 @@ button {
 /* section 5 */
 
 .seccionFive{
+  background: linear-gradient(to top, #8800f8, #2f00ff);
   width: 100%;
   min-height: 90vh;
   padding: 20vh;
@@ -601,7 +615,7 @@ input[type="radio"] {
 
 /* footer */
 .footer{
-  background:#e4f2ff ;
+  background: linear-gradient(to left, #b3ff00, #00960c);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -639,13 +653,13 @@ input[type="radio"] {
   animation-fill-mode: both;
   animation-timeline: --revealing-image;
 
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 5% cover 20%;
 }
 
 @keyframes show {
   from{
     opacity: 0;
-    scale: 95%;
+    scale:100%;
   }
 
   to{
@@ -657,6 +671,7 @@ input[type="radio"] {
 
 /* responsive */
 @media (width < 800px){
+ 
     .header{
        padding: 0 5vh;
        margin: 0 auto;
@@ -666,7 +681,7 @@ input[type="radio"] {
     }
 
     .seccionOne{
-      min-height: 85vh;
+      min-height: 100vh;
        padding: 2vh 5vh 10vh 5vh;
        
     }

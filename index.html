@@ -44,7 +44,7 @@
       <div class="logo">JAMYCREDITOS</div>
       <nav class="nav">
         <a href="#seccionOne"><span>I</span>nicio</a>
-        <a href="#"><span>N</span>osotros</a>
+        <a href="#seccionFour"><span>N</span>osotros</a>
         <a href="#simulador"><span>P</span>restamos</a>
         <a href="#"><span>I</span>nfo</a>
       </nav>
@@ -76,9 +76,9 @@
 
     <section class="seccionTwo">
       <h2>
-        <span style="color: #0474e4">¿</span>Qué requisitos necesitas para
+        <span style="color: #4400ff">¿</span>Qué requisitos necesitas para
         solicitar tu microPrestamo con
-        <span style="color: #0474e4">JAMYCREDITOS ?</span>
+        <span style="color: #4400ff">JAMYCREDITOS ?</span>
       </h2>
 
       <!-- cards -->
@@ -161,11 +161,11 @@
 
     <!-- section 4 -->
 
-    <section class="seccionFour">
+    <section class="seccionFour" id="seccionFour">
       <h2>Quienes somos!</h2>
       <p>
         Somos una entidad dedicada a ofrecer servicios de microcréditos rápidos
-        y accesibles. Nuestros préstamos iniciales van desde 50 mil hasta 200
+        y accesibles. Nuestros préstamos iniciales van desde 100 mil hasta 400
         mil pesos, y el monto puede aumentar según tu historial con nosotros. No
         necesitas llenar formularios ni descargar ninguna aplicación; todo el
         proceso se lleva a cabo de manera sencilla a través de WhatsApp.
@@ -198,13 +198,23 @@
     <section class="seccionFive" id="simulador">
       <h2>Simula tu credito de una manera facil y rapida</h2>
       <h4>
-        Recuerda que nuestro monto minimo es de 50 mil y el maximo son 150 mil
-        pesos y si es tu primera vez solo podemos prestarte 50 mil
+        Recuerda que nuestro monto minimo es de 100 mil y el maximo son 400 mil
+        pesos y si es tu primera vez solo podemos prestarte 100 mil
       </h4>
       <div class="simulador">
         <div class="container">
           <h1>Simulador de Préstamos</h1>
-          <div class="form-group">
+          <div class="slider-container">
+            <input type="range" id="monto" min="100000" max="400000" value="100000" step="50000" oninput="updateValue(this.value)">
+            <div class="value-display">Valor seleccionado: <span id="sliderValue">100000</span> pesos</div>
+        </div>
+    
+        <script>
+            function updateValue(value) {
+                document.getElementById('sliderValue').textContent = value;
+            }
+        </script>
+          <!-- <div class="form-group">
             <input
               type="number"
               id="monto"
@@ -213,9 +223,10 @@
               step="50000"
               placeholder="Ingrese el valor"
             />
-          </div>
+          </div> -->
           <div class="form-group">
             <label>Plazo:</label>
+        
             <div>
               <input type="radio" id="plazo15" name="plazo" value="15" />
               <label for="plazo15">15 días</label>
@@ -223,6 +234,10 @@
             <div>
               <input type="radio" id="plazo30" name="plazo" value="30" />
               <label for="plazo30">30 días</label>
+            </div>
+            <div>
+              <input type="radio" id="plazo30" name="plazo" value="60" />
+              <label for="plazo30">60 días</label>
             </div>
           </div>
           <button onclick="calcularPrestamo()">Calcular</button>
