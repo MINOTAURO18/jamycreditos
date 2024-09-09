@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html{
+html{ 
   scroll-behavior: smooth;
 }
 body {
@@ -278,7 +278,7 @@ button {
 /* section two */
 
 .seccionTwo {
-  background: linear-gradient(to left, #b3ff00, #00960c);
+  background-color: #ffff;
   width: 100%;
   min-height: 100vh;
   padding: 15vh;
@@ -290,7 +290,7 @@ button {
 }
 
 .seccionTwo h2 {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   max-width: 600px;
   font-size: 28px;
@@ -466,7 +466,7 @@ button {
 /* section 4 */
 
 .seccionFour{
-  background: linear-gradient(to left, #b3ff00, #00960c);
+  background-color: #ffff;
     width: 100%;
     min-height: 80vh;
     padding: 12vh;
@@ -615,7 +615,7 @@ input[type="radio"] {
 
 /* footer */
 .footer{
-  background: linear-gradient(to left, #b3ff00, #00960c);
+  background-color: #ffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
