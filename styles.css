@@ -478,9 +478,9 @@ button {
 }
 
 .seccionFour p{
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    text-wrap: pretty;
 }
 
 .seccionFour h2{
@@ -532,6 +532,9 @@ button {
   color: white;
   padding: 3px 15px;
   margin: 0 auto;
+  font-size: 15px;
+  text-wrap: pretty;
+  font-weight: 700;
 }
 
 .simulador{
@@ -551,11 +554,11 @@ button {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
   width: 350px;
-  height: 400px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   text-align: center;
 }
 
@@ -639,6 +642,45 @@ input[type="radio"] {
 .footer .redes a:hover{
   transform: translateY(-3px);
   transition: all .2s ease-in-out;
+}
+
+.container-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+  color: #555;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+  outline: none;
+}
+
+option {
+  padding: 10px;
 }
 
 

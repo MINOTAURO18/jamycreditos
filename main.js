@@ -59,25 +59,24 @@ function getBotResponse(input) {
 
 function calcularPrestamo() {
     const monto = parseFloat(document.getElementById('monto').value);
-    const plazo15 = document.getElementById('plazo15').checked;
-    const plazo30 = document.getElementById('plazo30').checked;
+    const opciones = document.getElementById('opciones')
+    const valor = opciones.value
+
     
     let resultado = document.getElementById('resultado');
-    
-    if (isNaN(monto) || monto < 100000 || monto > 400000) {
-        resultado.textContent = 'Por favor, ingrese un monto válido entre 100,000 y 400,000 pesos.';
-        return;
-    }
+   
     
     let interes = 0;
     
-    if (plazo15) {
-        interes = monto * .12;
-
-    } else if (plazo30 && monto > 99999) {
-        interes = monto * 0.25;
-    } else if (plazo30){
-        interes = monto * 0.4;
+    if (valor == 15) {
+        interes = monto * .14;}
+        
+    else if(valor == 30){
+        interes = monto * .18;
+    } else if (valor == 60){
+        interes = monto * .40;
+    } else if(valor == 90){
+        interes = monto * .50;
     }
     
     else {
