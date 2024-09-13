@@ -193,6 +193,56 @@
       </div>
     </section>
 
+    <style>
+     
+
+      /* Estilos para el input tipo range */
+      input[type="range"] {
+          -webkit-appearance: none; /* Elimina el estilo por defecto en WebKit (Chrome, Safari) */
+          width: 90%;
+          height: 14px;
+          background: #ddd;
+          border-radius: 5px;
+          outline: none;
+          cursor: pointer;
+          margin: 10px 0;
+          position: relative;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+          -webkit-appearance: none; /* Elimina el estilo por defecto en WebKit (Chrome, Safari) */
+          width: 24px;
+          height: 24px;
+          background: #8800f8;
+          border-radius: 50%;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+          width: 24px;
+          height: 24px;
+          background: #8800f8;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      input[type="range"]::-ms-thumb {
+          width: 24px;
+          height: 24px;
+          background: #8800f8;
+          border-radius: 50%;
+          cursor: pointer;
+      }
+
+      .value-display span {
+          font-weight: 900;
+          font-size: 20px;
+          color: #8800f8;
+      }
+  </style>
+
     <!-- section 5 -->
 
     <section class="seccionFive" id="simulador">
@@ -206,37 +256,25 @@
           <h1>Simulador Tu Préstamos</h1>
           <div class="slider-container">
             <input type="range" id="monto" min="100000" max="400000" value="100000" step="50000" oninput="updateValue(this.value)">
-            <div class="value-display"><span id="sliderValue">100000</span> pesos</div>
+            <div class="value-display"><span id="sliderValue">100000</span></div>
         </div>
     
         <script>
-            function updateValue(value) {
-                document.getElementById('sliderValue').textContent = value;
-            }
-        </script>
-          <!-- <div class="form-group">
-            <input
-              type="number"
-              id="monto"
-              min="50000"
-              max="150000"
-              step="50000"
-              placeholder="Ingrese el valor"
-            />
-          </div> -->
-        
-            <!-- <div>
-              <input type="radio" id="plazo15" name="plazo" value="15" />
-              <label for="plazo15">15 días</label>
-            </div>
-            <div>
-              <input type="radio" id="plazo30" name="plazo" value="30" />
-              <label for="plazo30">30 días</label>
-            </div>
-            <div>
-              <input type="radio" id="plazo30" name="plazo" value="60" />
-              <label for="plazo30">60 días</label>
-            </div> -->
+          function updateValue(value) {
+              document.getElementById('sliderValue').textContent = formatNumber(value);
+          }
+  
+          function formatNumber(value) {
+              // Convertir el valor a un número entero
+              const number = parseInt(value, 10);
+              // Agregar comas como separadores de miles
+              return number.toLocaleString();
+          }
+  
+          // Inicializar el valor al cargar la página
+          updateValue(document.getElementById('monto').value);
+      </script>
+         
             <div class="container-form">
               <h1>Plazos</h1>
                   <select id="opciones" name="opciones">
