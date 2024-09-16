@@ -69,14 +69,14 @@ function calcularPrestamo() {
     let interes = 0;
     
     if (valor == 15) {
-        interes = monto * .14;}
-        
+        interes = monto * .12;}
+    else if (valor == 30 && monto > 150000){
+        interes = monto * .35;
+    }
     else if(valor == 30){
-        interes = monto * .18;
+        interes = monto * .24;
     } else if (valor == 60){
-        interes = monto * .40;
-    } else if(valor == 90){
-        interes = monto * .50;
+        interes = monto * .60;
     }
     
     else {
