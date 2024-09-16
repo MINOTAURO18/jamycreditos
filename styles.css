@@ -278,6 +278,7 @@ button {
 /* section two */
 
 .seccionTwo {
+  position: relative;
   background-color: #ffff;
   width: 100%;
   min-height: 100vh;
@@ -302,6 +303,30 @@ button {
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
+}  
+
+.ilus-1{
+  position: absolute;
+  width: 120px;
+  left: 40px;
+  top: 55px;
+
+}
+
+.ilus-2{
+  position: absolute;
+  width: 130px;
+  right:40px;
+  top: 50px;
+
+}
+
+.ilus-3{
+  position: absolute;
+  width: 80px;
+  right:46.5%;
+  bottom: 10px;
+
 }
 
 /* cards section two */
@@ -466,6 +491,7 @@ button {
 /* section 4 */
 
 .seccionFour{
+  position: relative;
   background-color: #ffff;
     width: 100%;
     min-height: 80vh;
@@ -475,6 +501,22 @@ button {
     align-items: center;
     flex-direction: column;
     gap: 30px;
+}
+
+.ilus-4{
+  position: absolute;
+  width: 160px;
+  left: 5%;
+  top: 55%;
+
+}
+
+.ilus-5{
+  position: absolute;
+  width: 170px;
+  right:5%;
+  top: 55%;
+
 }
 
 .seccionFour p{
@@ -666,7 +708,8 @@ label {
 select {
   width: 100%;
   padding: 12px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 800;
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #fafafa;
@@ -674,13 +717,16 @@ select {
 }
 
 select:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+  border-color: #8800f8;
+  box-shadow: 0 0 0 2px #8800f8;
   outline: none;
 }
 
 option {
   padding: 10px;
+  font-weight: 800;
+  color: #8800f8;
+  
 }
 
 
@@ -728,6 +774,8 @@ option {
        
     }
 
+   
+
 
     .seccionOne h2{
       font-size: 45px;
@@ -770,11 +818,15 @@ option {
       text-align: center;
       padding: 10vh 5vh;
     }
-
     
 
-
-    
-
-    
 }
+
+@media (width < 1000px){
+  .ilus-1, .ilus-2, .ilus-3, .ilus-4, .ilus-5{
+    display: none;
+  } 
+}
+
+
+
