@@ -91,3 +91,21 @@ function calcularPrestamo() {
     `;
 }
 
+
+// SLIDER 
+
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+let index = 0;
+
+function showNextSlide() {
+    index++;
+    if (index >= slide.length) {
+        index = 0;
+    }
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Cambiar de slide cada 2 segundos
+setInterval(showNextSlide, 2200);
+
