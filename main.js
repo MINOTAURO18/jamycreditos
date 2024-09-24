@@ -68,17 +68,36 @@ function calcularPrestamo() {
     
     let interes = 0;
     
-    if (valor == 15) {
-        interes = monto * .12;}
-    else if (valor == 30 && monto > 150000){
-        interes = monto * .35;
+    if (valor == 15 && monto == 100000) {
+        interes =14000;}
+    else if (valor == 30 && monto == 100000){
+        interes = 25000;
     }
-    else if(valor == 30){
-        interes = monto * .24;
-    } else if (valor == 60){
-        interes = monto * .60;
+    else if(valor == 15 && monto == 150000){
+        interes = 20000
     }
-    
+
+    else if(valor == 30 && monto == 150000){
+        interes = 30000;
+    }
+    else if(valor == 15 && monto == 200000){
+        interes = 25000;
+    }
+    else if(valor == 30 && monto == 200000){
+        interes = 35000;
+    }
+    else if(valor == 15 && monto == 250000){
+        interes = 30000;
+    }
+    else if(valor == 30 && monto == 250000){
+        interes = 40000;
+    }
+    else if(valor == 15 && monto == 300000){
+        interes = 35000;
+    }
+    else if(valor == 30 && monto == 300000){
+        interes = 45000;
+    }
     else {
         resultado.textContent = 'Por favor, seleccione un plazo.';
         return;
