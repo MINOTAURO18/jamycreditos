@@ -126,5 +126,21 @@ function showNextSlide() {
 }
 
 // Cambiar de slide cada 2 segundos
-setInterval(showNextSlide, 2200);
+setInterval(showNextSlide, 2500);
+
+
+// preguntas frecuentes
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+  
+      button.classList.toggle('active');
+  
+      if (button.classList.contains('active')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      } else {
+        answer.style.maxHeight = 0;
+      }
+    });
+  });
 
