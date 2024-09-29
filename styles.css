@@ -669,11 +669,11 @@ button {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  min-height: 400px;
+  min-height: 300px;
   width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   text-align: center;
 }
 
@@ -791,7 +791,8 @@ input[type="radio"] {
 
 /* footer */
 .footer{
-  background-color: #ffff;
+  background: linear-gradient(to top, #8800f8, #2f00ff);
+
   display: flex;
   justify-content: space-between;
   align-items: center;

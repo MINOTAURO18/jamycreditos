@@ -51,7 +51,7 @@ function getBotResponse(input) {
     };
 
     const normalizedInput = input.toLowerCase().trim();
-    return responses[normalizedInput] || 'Para que tengamos una conversación más fluida, habla conmigo en <a href="https://web.whatsapp.com/" target="_blank">WhatsApp</a>!';
+    return responses[normalizedInput] || 'Para que tengamos una conversación más fluida, habla conmigo en <a href="https://wa.me/message/YF534NVIEWHMA1" target="_blank">WhatsApp</a>!';
 }
 
 
