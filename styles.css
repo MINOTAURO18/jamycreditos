@@ -202,7 +202,7 @@ button {
 /* seccion 1 */
 
 .seccionOne {
-  background: linear-gradient(to top, #8800f8, #2f00ff);
+  background: linear-gradient(to top, #000000f8, #120063);
   display: flex;
   min-height: 100vh;
   padding: 12vh;
@@ -437,9 +437,8 @@ button {
 /* section 3 */
 
 .seccionThree {
-  /* background: linear-gradient(135deg, #3198ff, #001f4e); */
-  /* background: #00960c; */
-  background: linear-gradient(to top, #8800f8, #2f00ff);
+
+  background: linear-gradient(to top, #000000f8, #120063);
   width: 100%;
   min-height: 70vh;
   display: flex;
@@ -623,7 +622,7 @@ button {
 /* section 5 */
 
 .seccionFive{
-  background: linear-gradient(to top, #8800f8, #2f00ff);
+  background: linear-gradient(to top, #000000f8, #120063);
   width: 100%;
   min-height: 90vh;
   padding: 20vh;
@@ -791,7 +790,7 @@ input[type="radio"] {
 
 /* footer */
 .footer{
-  background: linear-gradient(to top, #8800f8, #2f00ff);
+  background: linear-gradient(to top, #000000f8, #120063);
 
   display: flex;
   justify-content: space-between;
